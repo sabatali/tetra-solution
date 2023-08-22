@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ .btn {
+    @apply bg-color-secondary text-color-white px-9 py-3 rounded-md capitalize font-bold hover: opacity-80 ease-in duration-200;
+}
+
+.green_span {
+    @apply w-80 h-80 bg-color-blob absolute top-0 -left-5 -z-10 blur-2xl opacity-30 overflow-hidden rounded-full;
+}
+
+.blob2 {
+    @apply w-80 h-80 bg-color-secondary absolute bottom-10 right-0 -z-10 blur-2xl opacity-30 overflow-hidden rounded-full;
+} */
+
+.btn {
+    background-color: #6674CC;
+    color: #fff;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 6px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+
+.main-text .text {
+    position: relative;
+}
+
+.text.typewriter:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border-left: 10px solid #000000;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+
+    40%,
+    60% {
+        left: calc(100% + 4px);
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+.cards {
+    @apply flex flex-wrap gap-6 justify-center;
+}
+
+.card {
+    @apply bg-color-white max-w-[370px] h-[440ppx] p-8 border border-color-white flex;
+}
+
+.card:hover {
+    border: solid 0.5px #f2f2f4;
+    box-shadow: rgba(157, 157, 157, 0.2) 0px 4px 10px;
+    border-radius: 10px;
+}
+
+.footer {
+    border: solid 1.5px #f2f2f4;
+    box-shadow: rgba(157, 157, 157, 0.2) 0px 4px 10px;
+    border-radius: 10px;
+}
+
+.card-title {
+    @apply text-xl font-bold mb-2;
+}
+
+.small-desc {
+    @apply text-lg font-normal mb-2;
+}
+
+
+.user-text {
+    display: none;
+}
+
+.user-text.active-text {
+    display: block;
+    animation: moveup 1s linear forwards;
+}
+
+.user-pic {
+    transition: all 0.2s ease;
+}
+
+.user-pic.active-pic {
+    border: 2px solid #020726;
+}
+
+@keyframes moveup {
+    0% {
+        margin-top: 40px;
+        opacity: 0;
+    }
+
+    50% {
+        margin-top: 20px;
+        opacity: 0.1;
+    }
+
+    100% {
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+
+
+.green_span {
+    position: absolute;
+    top: 0%;
+    left: 14px;
+    width: 30px;
+    height: 30px;
+    background: #96cf68;
+    border-radius: 50%;
+    box-shadow: -2.65px 4.24px 24px 0px rgba(94, 160, 40, .5);
+}
+
+
+
+.toggle {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.content {
+    position: relative;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 30px;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.certificate {
+    background: radial-gradient(50% 50% at 100% 0, #000 0 5%, #20007a 6% 15%, #000 16% 25%, #20007a 26% 35%, #000 36% 45%, #20007a 46% 55%, #000 56% 65%, #20007a 66% 75%, #000 76% 85%, #20007a 86% 95%, transparent 96%), radial-gradient(50% 50% at 0 100%, #000 0 5%, #20007a 6% 15%, #000 16% 25%, #20007a 26% 35%, #000 36% 45%, #20007a 46% 55%, #000 56% 65%, #20007a 66% 75%, #000 76% 85%, #20007a 86% 95%, transparent 96%), radial-gradient(50% 50%, #000 0 5%, #20007a 6% 15%, #000 16% 25%, #20007a 26% 35%, #000 36% 45%, #20007a 46% 55%, #000 56% 65%, #20007a 66% 75%, #000 76% 85%, #20007a 86% 95%, transparent 96%), radial-gradient(50% 50%, #000 0 5%, #20007a 6% 15%, #000 16% 25%, #20007a 26% 35%, #000 36% 45%, #20007a 46% 55%, #000 56% 65%, #20007a 66% 75%, #000 76% 85%, #20007a 86% 95%, transparent 96%) 24px 24px;
+    background-color: #000;
+    background-size: 48px 48px;
+}
+
+
+
+.bg-about {
+    background-image: linear-gradient(rgba(1, 5, 30, 0.9), rgba(1, 5, 30, 0.9)), url(/image/tt1.JPG);
+    height: 300px;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.fqwrapper {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 15px 40px;
+    border-radius: 5px;
+    box-shadow: 0 15px 25px rgba(0, 0, 50, 0.2);
+}
+
+.fqtoggle {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #111130;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 0;
+}
+
+.fqcontent {
+    position: relative;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 30px;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+}
